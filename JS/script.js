@@ -21,7 +21,9 @@ btns.forEach(btn => {
             expressao = expressao.concat(btn.innerHTML);
 
         }else if(btn.innerHTML === "Calcular"){
-            if(eval(expressao) != Number.POSITIVE_INFINITY && eval(expressao) != Number.NEGATIVE_INFINITY){
+            if(expressao == ""){
+                resul = 1;
+            }else if(eval(expressao) != Number.POSITIVE_INFINITY && eval(expressao) != Number.NEGATIVE_INFINITY){
                 let expressaoTemp = expressao + " = ";
                 expressao = expressaoTemp + eval(expressao);
             }else
